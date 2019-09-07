@@ -47,7 +47,7 @@ a, a:hover, a:visited {
    margin: 0 10px;
 }
 
-.saved-active {
+a.saved-active {
    color: blue;
    border: 1px solid grey;
    padding: 5px;

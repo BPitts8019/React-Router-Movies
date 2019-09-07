@@ -22,36 +22,13 @@ const MovieList = props => {
 
    return (
       <div className="movie-list">
-         {movies.map((movie, index) => (
-            // <MovieDetails  key={movie.id} movie={movie} />
-            <Link to={`/movies/${movie.id}`} key={index}><MovieCard {...movie}/></Link>
+         {movies.map(movie => (
+            <Link to={`/movies/${movie.id}`} key={movie.id}>
+               <MovieCard {...movie}/>
+            </Link>
          ))}
       </div>
    );
 }
-
-// function MovieDetails({ movie }) {
-//    const { id, title, director, metascore, stars } = movie;
-//    return (
-//       <Link to={`/movies/${id}`}>
-//          <div className="movie-card">
-//             <h2>{title}</h2>
-//             <div className="movie-director">
-//                Director: <em>{director}</em>
-//             </div>
-//             <div className="movie-metascore">
-//                Metascore: <strong>{metascore}</strong>
-//             </div>
-//             <h3>Actors</h3>
-
-//             {stars.map(star => (
-//                <div key={star} className="movie-star">
-//                   {star}
-//                </div>
-//             ))}
-//          </div>
-//       </Link>
-//    );
-// }
 
 export default MovieList;
