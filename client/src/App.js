@@ -8,7 +8,9 @@ const App = () => {
    const [savedList, setSavedList] = useState([]);
 
    const addToSavedList = movie => {
-      setSavedList([...savedList, movie]);
+      if (!savedList.find(item => item.id === movie.id)) {
+         setSavedList([...savedList, movie]);
+      } 
    };
 
    return (
